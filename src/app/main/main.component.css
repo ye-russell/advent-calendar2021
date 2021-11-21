@@ -1,0 +1,15 @@
+.container {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.content .title {
+  font-size: 58px;
+  line-height: 67px;
+}
+.content p {
+  font-size: 37px;
+  line-height: 41px;
+  text-align: justify;
+}

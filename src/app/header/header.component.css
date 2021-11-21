@@ -1,0 +1,12 @@
+.container {
+  margin-top: 90px;
+  display: flex;
+  justify-content: flex-end;
+  height: 484px;
+}
+
+.nav-link {
+  color: #b40504;
+  font-size: 30px;
+  line-height: 33px;
+}

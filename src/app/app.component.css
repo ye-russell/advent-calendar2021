@@ -1,0 +1,6 @@
+.background-img {
+position: absolute;
+z-index: -1;
+width: 100%;
+height: auto;
+}

@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+/* font-family: 'Forum', cursive;
+font-family: 'Oranienbaum', serif; */
+
+body {
+  font-family: "Forum", cursive;
+  color: #5f5f40;
+  margin: auto;
+}
+
+.title {
+  font-family: "Oranienbaum", serif;
+  color: #9c0404;
+}
