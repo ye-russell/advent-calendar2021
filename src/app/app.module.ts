@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { AboutComponent } from './about/about.component';
+import { DayComponent } from './day/day.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AboutComponent } from './about/about.component';
     HeaderComponent,
     MainComponent,
     CalendarComponent,
-    AboutComponent
+    AboutComponent,
+    DayComponent
   ],
   imports: [
     BrowserModule,

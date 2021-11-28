@@ -1,0 +1,46 @@
+.container {
+  margin-top: 230px;
+}
+.calendar-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calendar-title h2 {
+  font-size: 46px;
+  line-height: 117%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.calendar-list {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 250px 250px 250px 250px;
+  grid-template-rows: 250px 250px 250px 250px;
+  grid-template-areas:
+    "first second ho ho"
+    "first third ho ho"
+    "fourth fifth sixth ."
+    ". fifth seventh eighth";
+}
+.calendar-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 0.3s;
+}
+.calendar-day p {
+  font-size: 144px;
+  line-height: 159px;
+}
+.ho-ho {
+  grid-area: ho;
+  background: #5F5F40;
+}
+.no-ho:hover {
+  transform: scale(1.025);
+ cursor: pointer;
+}

@@ -1,0 +1,19 @@
+.day-content {
+  display: flex;
+  flex-direction: row;
+}
+.day-content h2 {
+  font-size: 46px;
+  line-height: 129.68%;
+  /* identical to box height, or 60px */
+
+  letter-spacing: 0.04em;
+}
+.day-content p {
+  font-size: 30px;
+  line-height: 129.68%;
+  /* or 39px */
+
+  text-align: justify;
+  letter-spacing: -0.015em;
+}
