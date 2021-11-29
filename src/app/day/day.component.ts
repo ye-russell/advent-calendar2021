@@ -13,7 +13,7 @@ export class DayComponent implements OnInit {
   constructor(public activeModal: NgbActiveModal) {}
 
   ngOnInit(): void {
-    this.img = '../../../assets/pics/' + this.day!.number + '.png';
+    this.img = '../../../assets/pics/' + this.day!.number + '.png'
   }
 
 }
