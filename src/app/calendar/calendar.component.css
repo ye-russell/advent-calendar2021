@@ -1,29 +1,44 @@
 .container {
-  margin-top: 230px;
+  margin-top: 10%;
+  justify-content: center;
+  align-items: center;
 }
 .calendar-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 .calendar-title h2 {
-  font-size: 46px;
-  line-height: 117%;
+  font-size: 40px;
+  line-height: 100%;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+.calendar-title p {
+  font-size: 30px
 }
 .calendar-list {
   display: grid;
+  justify-content: center;
   gap: 40px;
-  grid-template-columns: 250px 250px 250px 250px;
-  grid-template-rows: 250px 250px 250px 250px;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: repeat(12, 200px);
   grid-template-areas:
-    "first second ho ho"
-    "first third ho ho"
-    "fourth fifth sixth ."
-    ". fifth seventh eighth";
+    "d1 d2 ho ho"
+    "d1 d3 ho ho"
+    "d4 d5 d6 ."
+    ". d5 d7 d8"
+    "d11 d11 d10 d9"
+    "d12 d13 d14 d15"
+    ". . d14 d16"
+    "d20 d19 d18 d17"
+    "d21 d21 d22 ."
+    ". d25 d24 d23"
+    "d31 d25 d26 d27"
+    "d31 d30 d29 d28";
 }
 .calendar-day {
   display: flex;
@@ -31,8 +46,11 @@
   align-items: center;
   color: white;
   transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  ;
 }
-.calendar-day p {
+  .calendar-day p {
   font-size: 144px;
   line-height: 159px;
 }
@@ -40,7 +58,67 @@
   grid-area: ho;
   background: #5F5F40;
 }
+.ho-ho img {
+  width: 100%;
+}
 .no-ho:hover {
   transform: scale(1.025);
  cursor: pointer;
+}
+.disabled {
+  filter: brightness(50%);
+}
+.disabled:hover {
+  transform: scale(1);
+  cursor: not-allowed;
+}
+@media only screen and (max-width: 1000px) {
+  .calendar-day p {
+    font-size: 125px;
+    line-height: 125px;
+  }
+
+  .calendar-list {
+    display: grid;
+    justify-content: center;
+    gap: 30px;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: repeat(21, 250px);
+    grid-template-areas:
+      "d1 d2"
+      "d1 d3"
+      "d4 d5"
+      "d6 d7"
+      "d8 d7"
+      "d8 d9"
+      "d11 d10"
+      "d12 d13"
+      "d15 d14"
+      "d16 d14"
+      "d16 d17"
+      "ho ho"
+      "ho ho"
+      "d19 d18"
+      "d20 d21"
+      "d22 d21"
+      "d23 d24"
+      "d26 d25"
+      "d26 d27"
+      "d29 d28"
+      "d30 d31"
+  }
+}
+@media only screen and (max-width: 600px) {
+  .calendar-day p {
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .calendar-list {
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    grid-template-columns: 125px 125px;
+    grid-template-rows: repeat(21, 125px);
+  }
 }

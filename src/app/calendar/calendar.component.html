@@ -1,15 +1,21 @@
-<div class="container">
+<div id="calendar" class="container">
   <div class="calendar-title">
-    <h2 class="title">{{calendar.title1}}<br>{{calendar.title2}}</h2>
-    <p>{{calendar.content}}</p>
+    <h2 class="title">{{ calendar.title1 }}<br />{{ calendar.title2 }}</h2>
+    <p>{{ calendar.content }}</p>
   </div>
-  <div class='calendar-list'>
-    <div class="calendar-day no-ho" [ngClass]="day.number" [style]="{'grid-area': day.order, 'background': day.background}" *ngFor="let day of dayListService.days" (click)='handleClick(day)'>
-      <p>{{day.number}}</p>
+  <div class="calendar-list">
+    <div
+      class="calendar-day card no-ho"
+      [ngClass]="'d' + day.number"
+      [ngClass]="+day.number > today ? 'disabled' : ''"
+      [style]="{ 'grid-area': 'd' + day.number, background: day.background }"
+      *ngFor="let day of dayListService.days"
+      (click)="handleClick(day)"
+    >
+      <p [style]="{ color: day.numberColor }">{{ day.number }}</p>
     </div>
-    <div class="calendar-day ho-ho">
-      <img src="../../../assets/pics/hohoho.png" alt="hohoho">
+    <div class="calendar-day ho-ho card">
+      <img src="../../../assets/pics/hohoho.png" alt="hohoho" />
     </div>
   </div>
 </div>
-

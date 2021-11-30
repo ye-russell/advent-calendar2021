@@ -3,5 +3,8 @@
     <li class="nav-item" *ngFor="let item of content">
       <a class="nav-link" [href]='item.link'>{{ item.name }}</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="share()">Поделиться</a>
+    </li>
   </ul>
 </div>

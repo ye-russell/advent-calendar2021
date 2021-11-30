@@ -6,18 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
   content = [
     {
       name: 'Адвент Календарь',
-      link: '/',
+      link: '#calendar',
     },
     {
       name: 'О Нас',
-      link: '/',
-    },
-    {
-      name: 'Поделиться',
-      link: '/',
+      link: '#about',
     },
   ]
   constructor() { }
@@ -25,4 +22,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  share() {
+    const shareData = {
+      title: 'Адвент Календарь!',
+      text: 'Как преобразить свой обычный декабрь!',
+      url: 'https://advent-calendar-2020.netlify.app/'
+    }
+    navigator.share(shareData);
+  }
 }

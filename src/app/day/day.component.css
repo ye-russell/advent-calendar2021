@@ -1,6 +1,14 @@
 .day-content {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+}
+.text-container {
+  width: 456px;
+}
+.day-content img {
+  height: 456px;
+  width: 456px;
 }
 .day-content h2 {
   font-size: 46px;
@@ -16,4 +24,53 @@
 
   text-align: justify;
   letter-spacing: -0.015em;
+}
+span {
+  color: #CC232A;
+  font-size: 30px;
+}
+.link {
+  font-size: 25px;
+line-height: 28px;
+/* identical to box height */
+
+color: #CC232A;
+transition: 0.2s;
+}
+.link:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+@media only screen and (max-width: 1200px) {
+  .text-container {
+    width: 300px;
+  }
+  .day-content img {
+    height: 300px;
+    width: 300px;
+  }
+  .day-content h2 {
+    font-size: 30px;
+    line-height: 129.68%;
+    /* identical to box height, or 60px */
+
+    letter-spacing: 0.04em;
+  }
+  .day-content p {
+    font-size: 25px;
+    line-height: 129.68%;
+    /* or 39px */
+
+    text-align: justify;
+    letter-spacing: -0.015em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .day-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

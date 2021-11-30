@@ -1,6 +1,10 @@
 .background-img {
 position: absolute;
+margin-top: -4%;
+left: 0;
+right: 0;
+margin-left: auto;
+margin-right: auto;
 z-index: -1;
 width: 100%;
-height: auto;
 }

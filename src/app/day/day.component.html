@@ -10,21 +10,15 @@
 </div>
 <div class="modal-body">
   <div class="day-content">
-    <div>
+    <div class="img-container">
       <img [src]="img" alt="" />
     </div>
-    <div>
+    <div class="text-container">
       <h2 class="title">{{ day!.title }}</h2>
       <p>{{ day!.content }}</p>
     </div>
   </div>
 </div>
 <div class="modal-footer">
-  <button
-    type="button"
-    class="btn btn-outline-dark"
-    (click)="activeModal.close('Close click')"
-  >
-    Close
-  </button>
+  <p class='link' (click)="share()">Поделиться</p>
 </div>

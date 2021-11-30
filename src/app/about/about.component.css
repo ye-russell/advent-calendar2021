@@ -1,0 +1,63 @@
+.we {
+  margin-top: 25%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 30px;
+}
+
+.content {
+  width: 540px;
+}
+.content .title {
+  font-size: 58px;
+  line-height: 67px;
+}
+.content p {
+  font-size: 30px;
+  line-height: 35px;
+  text-align: justify;
+}
+
+.created-by {
+  margin-top: 150px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.created-by h3 {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 37px;
+  line-height: 41px;
+  margin-bottom: 40px;
+}
+.team {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.team p {
+  font-size: 25px;
+  line-height: 25px;
+}
+.share {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  transition: 0.2s;
+  color: #9C0404;
+}
+.share:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+@media only screen and (max-width: 1000px) {
+  .team {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .teammate {
+    margin-bottom: 20px;
+  }
+}

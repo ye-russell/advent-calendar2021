@@ -1,1 +1,18 @@
-<p>about works!</p>
+<div id="about" class="container we">
+  <div class="content">
+    <h3 class="title">{{ title }}</h3>
+    <p>{{ content }}</p>
+  </div>
+</div>
+<div class="container created-by">
+  <h3 class="title">Created by</h3>
+  <div class="container team">
+    <div class="teammate" *ngFor="let teammate of team">
+      <p>{{ teammate.position }} - {{ teammate.name }}</p>
+      <p>{{ teammate.engCredentials }}</p>
+    </div>
+  </div>
+  <div class="container share">
+      <h3 (click)='share()'>Поделиться: Instagram</h3>
+  </div>
+</div>

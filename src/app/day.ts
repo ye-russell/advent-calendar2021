@@ -1,6 +1,6 @@
 export interface Day {
   number: string;
-  order: string;
+  numberColor: string;
   background: string;
   title: string;
   content: string;

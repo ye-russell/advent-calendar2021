@@ -10,6 +10,7 @@ import { Day } from '../day';
   styleUrls: ['./calendar.component.css']
 })
 export class CalendarComponent implements OnInit {
+  today = new Date().getDate();
   calendar = {
     title1: 'Адвент календарь 2021 года',
     title2: 'Как преборазить свой обычный декабрь',
@@ -17,11 +18,14 @@ export class CalendarComponent implements OnInit {
   }
   constructor(public dayListService: DayListService, private modalService: NgbModal) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   handleClick(day: Day): void {
-    const modalRef = this.modalService.open(DayComponent, { size: 'xl' });
-    modalRef.componentInstance.day = day;
+    if (+day.number <= this.today) {
+      const modalRef = this.modalService.open(DayComponent, { size: 'xl' });
+      modalRef.componentInstance.day = day;
+    }
+
   }
 }

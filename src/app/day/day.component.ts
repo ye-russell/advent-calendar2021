@@ -15,5 +15,13 @@ export class DayComponent implements OnInit {
   ngOnInit(): void {
     this.img = '../../../assets/pics/' + this.day!.number + '.png'
   }
-
+  share() {
+    const shareData = {
+      title: 'День' + this.day!.number + '.',
+      text: this.day!.title,
+      url: 'https://advent-calendar-2020.netlify.app/'
+    }
+    console.log(shareData)
+    navigator.share(shareData);
+  }
 }
