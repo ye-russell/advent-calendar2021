@@ -18,7 +18,8 @@
   margin-bottom: 20px;
 }
 .calendar-title p {
-  font-size: 30px
+  font-size: 30px;
+  text-align: center;
 }
 .calendar-list {
   display: grid;
@@ -47,23 +48,21 @@
   color: white;
   transition: 0.3s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-  ;
 }
-  .calendar-day p {
+.calendar-day p {
   font-size: 144px;
   line-height: 159px;
 }
 .ho-ho {
   grid-area: ho;
-  background: #5F5F40;
+  background: #5f5f40;
 }
 .ho-ho img {
   width: 100%;
 }
 .no-ho:hover {
   transform: scale(1.025);
- cursor: pointer;
+  cursor: pointer;
 }
 .disabled {
   filter: brightness(50%);
@@ -105,7 +104,7 @@
       "d26 d25"
       "d26 d27"
       "d29 d28"
-      "d30 d31"
+      "d30 d31";
   }
 }
 @media only screen and (max-width: 600px) {

@@ -13,7 +13,7 @@ export class CalendarComponent implements OnInit {
   today = new Date().getDate();
   calendar = {
     title1: 'Адвент календарь 2021 года',
-    title2: 'Как преборазить свой обычный декабрь',
+    title2: 'Как преобразить свой обычный декабрь',
     content: 'Придуман и разработан для усиления праздничного настроения',
   }
   constructor(public dayListService: DayListService, private modalService: NgbModal) { }
