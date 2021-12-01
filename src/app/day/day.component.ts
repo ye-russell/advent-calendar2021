@@ -19,7 +19,7 @@ export class DayComponent implements OnInit {
     const shareData = {
       title: 'День' + this.day!.number + '.',
       text: this.day!.title,
-      url: 'https://advent-calendar-2020.netlify.app/'
+      url: 'https://advent-calendar-2021.netlify.app/'
     }
     console.log(shareData)
     navigator.share(shareData);

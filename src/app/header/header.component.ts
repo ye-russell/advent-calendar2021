@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
     const shareData = {
       title: 'Адвент Календарь!',
       text: 'Как преобразить свой обычный декабрь!',
-      url: 'https://advent-calendar-2020.netlify.app/'
+      url: 'https://advent-calendar-2021.netlify.app/'
     }
     navigator.share(shareData);
   }
