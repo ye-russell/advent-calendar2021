@@ -6,8 +6,7 @@
   <div class="calendar-list">
     <div
       class="calendar-day card no-ho"
-      [ngClass]="'d' + day.number"
-      [ngClass]="+day.number > today ? 'disabled' : ''"
+      [ngClass]="{'disabled': +day.number > today, 'today': +day.number == today}"
       [style]="{ 'grid-area': 'd' + day.number, background: day.background }"
       *ngFor="let day of dayListService.days"
       (click)="handleClick(day)"
